@@ -24,12 +24,30 @@ const JoinModal = ({ onClose }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // !! PASTE YOUR GOOGLE APPS SCRIPT URL HERE !!
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxBSQ11hLeHdkPs4MoPfKwE0jtPhUnQJNdwwNMwjZr2smEqgiip6a-G4O9PZ13n_uQ/exec';
 
-    alert('Thank you for joining SAMWAAD CLUB! We will contact you soon.');
-    setIsSubmitting(false);
-    onClose();
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors', // Important to avoid CORS errors
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Since 'no-cors' mode prevents reading the response, we assume success
+      // In a real app, you might have a more robust success check
+      alert('Thank you for joining SAMWAAD CLUB! We will contact you soon.');
+      onClose(); // Close the modal on success
+
+    } catch (error) {
+      console.error('Error!', error.message);
+      alert('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false); // Re-enable the button whether it succeeded or failed
+    }
   };
 
   return (
@@ -78,14 +96,14 @@ const JoinModal = ({ onClose }) => {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             >
               <option value="">Select Your Cource</option>
-              <option value="Computer Science">B.Tech</option>
-              <option value="Electronics">BCA</option>
-              <option value="Mechanical">BBA</option>
-              <option value="Civil">B.Pharma</option>
-              <option value="Electrical">D.Pharma</option>
-              <option value="Information Technology">MBA</option>
-              <option value="Business Administration">MCA</option>
-              <option value="Other">Poly</option>
+              <option value="B.Tech">B.Tech</option>
+              <option value="BCA">BCA</option>
+              <option value="BBA">BBA</option>
+              <option value="B.Pharma">B.Pharma</option>
+              <option value="D.Pharma">D.Pharma</option>
+              <option value="MBA">MBA</option>
+              <option value="MCA">MCA</option>
+              <option value="Poly">Poly</option>
             </select>
           </div>
 
