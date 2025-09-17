@@ -17,7 +17,7 @@ const Gallery = () => {
     {
       id: 1,
       url: pic1,
-      title: 'Annual Communication Summit',
+      title: 'Annual Communication summit',
       category: 'Events',
       date: 'December 2024'
     },
@@ -227,7 +227,7 @@ const Gallery = () => {
             Join us and create memories that will last a lifetime. Your story could be the next highlight in our gallery!
           </p>
           <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
-            Join SAMWAAD CLUB
+            <a href="https://chat.whatsapp.com/JzY84VFRkZVLmiBlt5HY78">Join Samwaad</a>
           </button>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { Target, Users, Heart, Lightbulb, Award, BookOpen } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" id='About-us'>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 text-white py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
