@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import About from '../pages/About';
 import { FacebookIcon, TwitterIcon, InstagramIcon, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -22,15 +20,15 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>College Campus, Main Building</span>
+                <span>Kashi Institute of Technology, Varanasi</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span className='cursor-pointer'>samwaadclub@gmail.com</span>
+                <a className='cursor-pointer' href='mailto:samwaadclub@gmail.com'>samwaadclub@gmail.com</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+91 91993 81660</span>
+                <span>+91 91993 81660 (Club President)</span>
               </div>
             </div>
           </div>

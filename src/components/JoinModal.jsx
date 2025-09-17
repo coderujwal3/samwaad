@@ -95,8 +95,9 @@ const JoinModal = ({ onClose }) => {
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             >
-              <option value="">Select Your Cource</option>
-              <option value="B.Tech">B.Tech</option>
+              <option value="">Select Your Course</option>
+              <option value="B.Tech">B.Tech CSE</option>
+              <option value="B.Tech">B.Tech non-CSE</option>
               <option value="BCA">BCA</option>
               <option value="BBA">BBA</option>
               <option value="B.Pharma">B.Pharma</option>

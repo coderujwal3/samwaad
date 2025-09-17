@@ -204,7 +204,7 @@ const About = () => {
             <div className="flex justify-center">
               <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 max-w-sm">
                 <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">DR</span>
+                  <span className="text-2xl font-bold text-white">AT</span>
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-gray-800">Assist. Prof. Archana Triphati</h4>
                 <p className="text-indigo-600 font-medium mb-4">Faculty Coordinator</p>
@@ -268,7 +268,7 @@ const About = () => {
                 <span className="text-lg font-bold text-white">US</span>
               </div>
               <h4 className="text-lg font-semibold mb-1 text-gray-800">Ujwal Singh</h4>
-              <p className="text-blue-600 text-sm font-medium mb-2">Event Coordinator</p>
+              <p className="text-blue-600 text-sm font-medium mb-2">Event Head</p>
               <p className="text-gray-600 text-xs">B.Tech, 3rd Year</p>
             </div>
 
@@ -294,7 +294,7 @@ const About = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-lg font-bold text-white">JS</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Janvi Singh</h4>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Janhvi Singh</h4>
               <p className="text-orange-600 text-sm font-medium mb-2">Social Media Manager</p>
               <p className="text-gray-600 text-xs">B.Tech, 3rd Year</p>
             </div>

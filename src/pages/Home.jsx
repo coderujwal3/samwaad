@@ -171,7 +171,7 @@ const Home = () => {
             Don't miss out on the opportunity to be part of something amazing. Join SAMWAAD CLUB today!
           </p>
           <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg inline-flex items-center">
-            Get Started Today
+            <a href="https://chat.whatsapp.com/JzY84VFRkZVLmiBlt5HY78" target='_blank'>Get Started Today</a>
             <ChevronRight className="w-5 h-5 ml-2" />
           </button>
         </div>
