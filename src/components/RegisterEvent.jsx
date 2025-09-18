@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { User, BookOpen, Calendar, Mail, Phone } from "lucide-react";
+import { User, BookOpen, Calendar, Mail, Phone, Speech } from "lucide-react";
 
 const initialState = {
   name: "",
@@ -153,6 +153,21 @@ const RegisterEvent = ({ eventName }) => {
                   ))}
                 </select>
               </div>
+            </div>
+            {/* Talent */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+                <Speech className="w-4 h-4" />Mention your talent
+              </label>
+              <input
+                type="text"
+                name="talent"
+                value={form.talent}
+                onChange={handleChange}
+                placeholder="Dancing, Singing, Speech, etc."
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                required
+              />
             </div>
             {/* Email */}
             <div>

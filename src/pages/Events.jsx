@@ -218,15 +218,15 @@ const Events = () => {
       {/* RegisterEvent Modal */}
       {showRegister && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
           onClick={handleClose}
         >
           <div
-            className="max-w-lg w-full relative bg-white rounded-2xl shadow-lg"
+            className="max-w-lg w-full relative bg-white rounded-2xl shadow-lg max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 left-2 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold z-10"
               onClick={handleClose}
               aria-label="Close"
             >
