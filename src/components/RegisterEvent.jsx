@@ -42,6 +42,7 @@ const RegisterEvent = ({ eventName }) => {
     e.preventDefault();
     setResult("Sending...");
     const formData = new FormData();
+    formData.append("event", eventName);
     Object.entries(form).forEach(([key, value]) => {
       formData.append(key, value);
     });
@@ -163,7 +164,7 @@ const RegisterEvent = ({ eventName }) => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="your.email@college.edu"
+                placeholder="samwaad@gmail.com"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               />
@@ -178,7 +179,7 @@ const RegisterEvent = ({ eventName }) => {
                 name="mobile"
                 value={form.mobile}
                 onChange={handleChange}
-                placeholder="+91 98765 43210"
+                placeholder="9876543210"
                 pattern="[0-9]{10,}"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
