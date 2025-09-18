@@ -87,7 +87,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" data-scroll-section>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-indigo-800 text-white py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">

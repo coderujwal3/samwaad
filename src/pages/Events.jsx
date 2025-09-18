@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navratri from "../assets/pics/navratri.jpg";
 import {
   Calendar,
   Clock,
@@ -18,17 +19,16 @@ const Events = () => {
 
   const upcomingEvents = [
     {
-      id: 1,
-      title: "Annual Communication Summit 2025",
-      date: "March 15, 2025",
-      time: "10:00 AM - 6:00 PM",
-      location: "Main Auditorium",
+      id: 4,
+      title: "Sharad Utsav - Navratri Celebration",
+      date: "September 22, 2025",
+      time: "10:00 AM - 4:35 PM",
+      location: "CRC 2nd Floor",
       description:
-        "A day-long summit featuring keynote speakers, workshops, and networking opportunities focused on modern communication trends.",
-      category: "Summit",
-      attendees: 200,
-      image:
-        "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
+      category: "Fest",
+      attendees: 150,
+      image: Navratri,
     },
     {
       id: 2,
@@ -44,17 +44,17 @@ const Events = () => {
         "https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     {
-      id: 3,
-      title: "Debate Championship",
-      date: "March 8, 2025",
-      time: "6:00 PM - 9:00 PM",
-      location: "Student Center Hall",
+      id: 1,
+      title: "Annual Communication Summit 2025",
+      date: "March 15, 2025",
+      time: "10:00 AM - 6:00 PM",
+      location: "Main Auditorium",
       description:
-        "Inter-department debate competition on contemporary social and technological issues.",
-      category: "Competition",
-      attendees: 150,
+        "A day-long summit featuring keynote speakers, workshops, and networking opportunities focused on modern communication trends.",
+      category: "Summit",
+      attendees: 200,
       image:
-        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
   ];
 
