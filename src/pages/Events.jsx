@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navratri from "../assets/pics/navratri.jpg";
+import Navratri from "../assets/pics/Navratri.jpg";
 import {
   Calendar,
   Clock,
