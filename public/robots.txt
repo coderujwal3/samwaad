@@ -1,0 +1,7 @@
+# robots.txt for SAMWAAD Club Website
+
+User-agent: *
+Allow: /
+
+# Sitemap location (optional but recommended)
+Sitemap: https://samwaad.vercel.app/sitemap.xml
