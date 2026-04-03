@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navratri from "../assets/pics/Navratri.jpg";
+import DebateImage from "../assets/pics/DEBATE.png";
 import {
   Calendar,
   Clock,
@@ -19,16 +19,16 @@ const Events = () => {
 
   const upcomingEvents = [
     {
-      id: 4,
-      title: "Sharad Utsav - Navratri Celebration",
-      date: "September 22, 2025",
-      time: "10:00 AM - 4:35 PM",
+      id: 5,
+      title: "Inter-Department Debate",
+      date: "April 8, 2026",
+      time: "2:00 PM - 3:45 PM",
       location: "CRC 2nd Floor",
       description:
-        "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
-      category: "Fest",
-      attendees: 150,
-      image: Navratri,
+        "Join us for an engaging debate competition. Representatives will present their perspectives on compelling topics.",
+      category: "Competition",
+      attendees: "Students from each department",
+      image: DebateImage,
     },
     {
       id: 2,
@@ -85,6 +85,15 @@ const Events = () => {
         "Expert insights on how artificial intelligence is transforming communication.",
       attendees: 120,
       rating: 4.7,
+    },
+    {
+      id: 7,
+      title: "Sharad Utsav - Navratri Celebration",
+      date: "September 22, 2025",
+      description:
+        "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
+      attendees: 150,
+      rating: 4.9,
     },
   ];
 
