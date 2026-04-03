@@ -19,31 +19,6 @@ const Events = () => {
 
   const upcomingEvents = [
     {
-      id: 4,
-      title: "Sharad Utsav - Navratri Celebration",
-      date: "September 22, 2025",
-      time: "10:00 AM - 4:35 PM",
-      location: "CRC 2nd Floor",
-      description:
-        "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
-      category: "Fest",
-      attendees: 150,
-      image: Navratri,
-    },
-    {
-      id: 2,
-      title: "Public Speaking Workshop",
-      date: "February 28, 2025",
-      time: "2:00 PM - 5:00 PM",
-      location: "Conference Room B",
-      description:
-        "Master the art of public speaking with expert trainers and practical exercises.",
-      category: "Workshop",
-      attendees: 50,
-      image:
-        "https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
       id: 1,
       title: "Annual Communication Summit 2025",
       date: "March 15, 2025",
@@ -85,6 +60,23 @@ const Events = () => {
         "Expert insights on how artificial intelligence is transforming communication.",
       attendees: 120,
       rating: 4.7,
+    },
+    {
+      id: 7,
+      title: "Sharad Utsav - Navratri Celebration",
+      date: "September 22, 2025",
+      description:
+        "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
+      attendees: 150,
+      rating: 4.8,
+    },
+    {
+      id: 8,
+      title: "Public Speaking Workshop",
+      date: "February 28, 2025",
+      description:
+        "Master the art of public speaking with expert trainers and practical exercises.",
+      attendees: 50,
     },
   ];
 
