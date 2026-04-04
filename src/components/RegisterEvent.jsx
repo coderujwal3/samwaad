@@ -6,6 +6,8 @@ const initialState = {
   department: "",
   year: "",
   semester: "",
+  debate: "",
+  stance: "",
   email: "",
   mobile: "",
 };
@@ -157,14 +159,28 @@ const RegisterEvent = ({ eventName }) => {
             {/* Talent */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Speech className="w-4 h-4" />Mention your talent
+                <Speech className="w-4 h-4" /> Debate Language
               </label>
               <input
                 type="text"
-                name="talent"
-                value={form.talent}
+                name="debate"
+                value={form.debate}
                 onChange={handleChange}
-                placeholder="Dancing, Singing, Speech, etc."
+                placeholder="English or Hindi"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+                <Speech className="w-4 h-4" /> For or Against
+              </label>
+              <input
+                type="text"
+                name="stance"
+                value={form.stance}
+                onChange={handleChange}
+                placeholder="For or Against"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               />
