@@ -29,6 +29,7 @@ const Events = () => {
       category: "Competition",
       attendees: 50,
       image: DebateImage,
+      isOpen: true,
     },
     {
       id: 2,
@@ -42,19 +43,21 @@ const Events = () => {
       attendees: 50,
       image:
         "https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=800",
+      isOpen: false,
     },
     {
       id: 1,
-      title: "Annual Communication Summit 2025",
-      date: "March 15, 2025",
+      title: "Poetry Recitation Comptetion",
+      date: "April 15, 2026",
       time: "10:00 AM - 6:00 PM",
       location: "Main Auditorium",
       description:
         "A day-long summit featuring keynote speakers, workshops, and networking opportunities focused on modern communication trends.",
-      category: "Summit",
-      attendees: 200,
+      category: "Poetry Competition",
+      attendees: 50,
       image:
         "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
+      isOpen: false,
     },
   ];
 
@@ -208,14 +211,21 @@ const Events = () => {
                   </div>
 
                   <button
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
+                    className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center ${
+                      event.isOpen !== false
+                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+                        : "bg-gray-200 text-gray-500 cursor-not-allowed"
+                    }`}
                     onClick={() => {
-                      setShowRegister(true);
-                      setSelectedEvent(event.title);
+                      if (event.isOpen !== false) {
+                        setShowRegister(true);
+                        setSelectedEvent(event.title);
+                      }
                     }}
+                    disabled={event.isOpen === false}
                   >
-                    Register Now
-                    <ChevronRight className="w-4 h-4 ml-2" />
+                    {event.isOpen !== false ? "Register Now" : "Open Soon"}
+                    {event.isOpen !== false && <ChevronRight className="w-4 h-4 ml-2" />}
                   </button>
                 </div>
               </div>
