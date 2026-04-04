@@ -21,7 +21,7 @@ const Events = () => {
     {
       id: 8,
       title: "Inter-Department Debate",
-      date: "April 8, 2026",
+      date: "April 9, 2026",
       time: "2:00 PM - 3:45 PM",
       location: "CRC 2nd Floor",
       description:
