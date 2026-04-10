@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DebateImage from "../assets/pics/DEBATE.png";
+//import DebateImage from "../assets/pics/DEBATE.png";
 import {
   Calendar,
   Clock,
@@ -19,16 +19,18 @@ const Events = () => {
 
   const upcomingEvents = [
     {
-      id: 8,
-      title: "Inter-Department Debate",
-      date: "April 9, 2026",
-      time: "2:00 PM - 3:45 PM",
-      location: "CRC 2nd Floor",
+      id: 1,
+      title: "Poetry Recitation Comptetion",
+
+      date: "April 15, 2026",
+      time: "1:30 PM - 3:45 PM",
+      location: "CRC 3rd Floor",
       description:
-        "An engaging debate competition between departments. Each department will be represented by 4 participants.",
-      category: "Competition",
+        "A contest where participants perform poems aloud, focusing on expression, voice modulation, and interpretation",
+      category: "Poetry Competition",
       attendees: 50,
-      image: DebateImage,
+      image:
+        "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
       isOpen: true,
     },
     {
@@ -45,26 +47,23 @@ const Events = () => {
         "https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=800",
       isOpen: false,
     },
-    {
-      id: 1,
-      title: "Poetry Recitation Comptetion",
-      date: "April 15, 2026",
-      time: "10:00 AM - 6:00 PM",
-      location: "Main Auditorium",
-      description:
-        "A day-long summit featuring keynote speakers, workshops, and networking opportunities focused on modern communication trends.",
-      category: "Poetry Competition",
-      attendees: 50,
-      image:
-        "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
-      isOpen: false,
-    },
   ];
 
   const pastEvents = [
     {
+
+      id: 8,
+      title: "Inter-Department Debate",
+      date: "April 9, 2026",
+      description:
+        "An engaging debate competition between departments. Each department was represented by 4 participants.",
+      attendees: 50,
+      rating: 4.8,
+    },
+    {
       id: 7,
       title: "Sharad Utsav - Navratri Celebration",
+
       date: "September 22, 2025",
       description:
         "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
@@ -211,11 +210,10 @@ const Events = () => {
                   </div>
 
                   <button
-                    className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center ${
-                      event.isOpen !== false
-                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
-                        : "bg-gray-200 text-gray-500 cursor-not-allowed"
-                    }`}
+                    className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center ${event.isOpen !== false
+                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+                      : "bg-gray-200 text-gray-500 cursor-not-allowed"
+                      }`}
                     onClick={() => {
                       if (event.isOpen !== false) {
                         setShowRegister(true);
