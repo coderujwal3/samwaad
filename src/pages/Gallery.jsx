@@ -1,83 +1,89 @@
 import React, { useState } from 'react';
-import { Calendar, Users, Award, Heart, X } from 'lucide-react';
-import pic1 from '../assets/pics/pic1.jpg';
-import pic2 from '../assets/pics/pic2.jpg';
-import pic3 from '../assets/pics/pic3.jpg';
-import pic4 from '../assets/pics/pic4.jpg';
-import pic5 from '../assets/pics/pic5.jpg';
-import pic6 from '../assets/pics/pic6.jpg';
-import pic7 from '../assets/pics/pic7.jpg';
-import pic8 from '../assets/pics/pic8.jpg';
-import pic9 from '../assets/pics/pic9.jpg';
+import { Calendar, Users, Award, Heart, X, Download, CheckCircle2, Circle, CheckSquare, Square } from 'lucide-react';
+
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isSelectionMode, setIsSelectionMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState(new Set());
 
-  const galleryImages = [
-    {
-      id: 1,
-      url: pic1,
-      title: 'Annual Communication summit',
-      category: 'Events',
-      date: 'December 2024'
-    },
-    {
-      id: 2,
-      url: pic2,
-      title: 'Public Speaking Workshop',
-      category: 'Workshops',
-      date: 'November 2024'
-    },
-    {
-      id: 3,
-      url: pic3,
-      title: 'Debate Championship',
-      category: 'Competitions',
-      date: 'October 2024'
-    },
-    {
-      id: 4,
-      url: pic4,
-      title: 'Cultural Fusion Night',
-      category: 'Cultural',
-      date: 'September 2024'
-    },
-    {
-      id: 5,
-      url: pic5,
-      title: 'Leadership Bootcamp',
-      category: 'Training',
-      date: 'August 2024'
-    },
-    {
-      id: 6,
-      url: pic6,
-      title: 'Tech Talk Session',
-      category: 'Seminars',
-      date: 'July 2024'
-    },
-    {
-      id: 7,
-      url: pic7,
-      title: 'Team Building Activity',
-      category: 'Activities',
-      date: 'June 2024'
-    },
-    {
-      id: 8,
-      url: pic8,
-      title: 'Award Ceremony',
-      category: 'Awards',
-      date: 'May 2024'
-    },
-    {
-      id: 9,
-      url: pic9,
-      title: 'Community Service',
-      category: 'Service',
+
+  // Dynamically import all images from assets/pics
+  const imageModules = import.meta.glob('../assets/pics/*.{png,jpg,jpeg,webp,JPG,JPEG}', { eager: true });
+
+  // Existing metadata for specific images
+  const existingMetadata = {
+    'pic1.jpg': { title: 'Annual Communication summit', category: 'Events', date: 'December 2024' },
+    'pic2.jpg': { title: 'Public Speaking Workshop', category: 'Workshops', date: 'November 2024' },
+    'pic3.jpg': { title: 'Debate Championship', category: 'Competitions', date: 'October 2024' },
+    'pic4.jpg': { title: 'Cultural Fusion Night', category: 'Cultural', date: 'September 2024' },
+    'pic5.jpg': { title: 'Leadership Bootcamp', category: 'Training', date: 'August 2024' },
+    'pic6.jpg': { title: 'Tech Talk Session', category: 'Seminars', date: 'July 2024' },
+    'pic7.jpg': { title: 'Team Building Activity', category: 'Activities', date: 'June 2024' },
+    'pic8.jpg': { title: 'Award Ceremony', category: 'Awards', date: 'May 2024' },
+    'pic9.jpg': { title: 'Community Service', category: 'Service', date: 'April 2024' },
+    'Navratri.jpg': { title: 'Navratri Celebration', category: 'Cultural', date: 'October 2024' },
+    'debate.png': { title: 'Inter-Department Debate', category: 'Competitions', date: 'March 2024' }
+  };
+
+  const galleryImages = Object.entries(imageModules).map(([path, module], index) => {
+    const filename = path.split('/').pop();
+    const metadata = existingMetadata[filename] || {
+      title: filename.startsWith('WhatsApp') ? 'Event Memory' : filename.split('.')[0].replace(/_/g, ' '),
+      category: 'Memories',
       date: 'April 2024'
+    };
+
+    return {
+      id: index + 1,
+      url: module.default,
+      ...metadata
+    };
+  });
+
+  const toggleSelection = (id) => {
+    const newSelected = new Set(selectedIds);
+    if (newSelected.has(id)) {
+      newSelected.delete(id);
+    } else {
+      newSelected.add(id);
     }
-  ];
+    setSelectedIds(newSelected);
+  };
+
+  const selectAll = () => {
+    if (selectedIds.size === galleryImages.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(galleryImages.map(img => img.id)));
+    }
+  };
+
+  const handleDownloadSelected = async () => {
+    const selectedPhotos = galleryImages.filter(img => selectedIds.has(img.id));
+    
+    for (const photo of selectedPhotos) {
+      try {
+        const response = await fetch(photo.url);
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        // Try to keep original extension if possible
+        const extension = photo.url.split('.').pop().split('?')[0] || 'jpg';
+        link.download = `${photo.title.replace(/\s+/g, '_')}_${photo.id}.${extension}`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+        // Small delay to prevent browser from blocking multiple downloads
+        await new Promise(resolve => setTimeout(resolve, 200));
+      } catch (error) {
+        console.error('Download failed for', photo.url, error);
+      }
+    }
+  };
+
 
   const achievements = [
     { title: 'Best Student Organization 2024', icon: Award, color: 'bg-yellow-500' },
@@ -128,22 +134,80 @@ const Gallery = () => {
       {/* Photo Gallery */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
-            Photo Gallery
-          </h2>
+          <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-4">
+            <h2 className="text-4xl font-bold text-gray-800">
+              Photo Gallery
+            </h2>
+            <div className="flex items-center gap-3">
+              {!isSelectionMode ? (
+                <button
+                  onClick={() => setIsSelectionMode(true)}
+                  className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-md"
+                >
+                  <CheckSquare className="w-4 h-4" />
+                  Select Photos
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={selectAll}
+                    className="flex items-center gap-2 border border-gray-300 text-gray-600 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors"
+                  >
+                    {selectedIds.size === galleryImages.length ? 'Deselect All' : 'Select All'}
+                  </button>
+                  <button
+                    onClick={handleDownloadSelected}
+                    disabled={selectedIds.size === 0}
+                    className={`flex items-center gap-2 px-6 py-2 rounded-full transition-colors shadow-md ${
+                      selectedIds.size > 0 
+                      ? 'bg-green-600 text-white hover:bg-green-700' 
+                      : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    }`}
+                  >
+                    <Download className="w-4 h-4" />
+                    Download ({selectedIds.size})
+                  </button>
+                  <button
+                    onClick={() => {
+                      setIsSelectionMode(false);
+                      setSelectedIds(new Set());
+                    }}
+                    className="text-gray-500 hover:text-red-600 px-4 py-2 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image) => (
               <div
                 key={image.id}
-                className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                onClick={() => setSelectedImage(image.url)}
+                className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105 ${
+                  isSelectionMode && selectedIds.has(image.id) ? 'ring-4 ring-indigo-500 scale-105' : ''
+                }`}
+                onClick={() => isSelectionMode ? toggleSelection(image.id) : setSelectedImage(image.url)}
               >
                 <img
                   src={image.url}
                   alt={image.title}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                
+                {/* Selection Overlay */}
+                {isSelectionMode && (
+                  <div className={`absolute top-4 right-4 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                    selectedIds.has(image.id) ? 'bg-indigo-500 text-white' : 'bg-white/50 text-gray-600'
+                  }`}>
+                    {selectedIds.has(image.id) ? <CheckCircle2 className="w-6 h-6" /> : <Circle className="w-6 h-6" />}
+                  </div>
+                )}
+
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent transition-opacity duration-300 ${
+                  isSelectionMode ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                }`}>
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white font-semibold text-lg mb-1">{image.title}</h3>
                     <div className="flex items-center justify-between">
@@ -156,6 +220,7 @@ const Gallery = () => {
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
@@ -181,7 +246,7 @@ const Gallery = () => {
                 Relive the best moments from our biggest event of the year, featuring keynote speakers, workshops, and networking sessions.
               </p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
               <div className="aspect-video bg-gradient-to-br from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <div className="text-center text-white">

@@ -128,7 +128,7 @@ const About = () => {
                     <p className="text-gray-600">SAMWAAD CLUB was founded by a group of passionate students with a vision to create a platform for meaningful dialogue and connection.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-4 h-4 bg-purple-600 rounded-full mt-2 mr-6 flex-shrink-0"></div>
                   <div>
@@ -136,7 +136,7 @@ const About = () => {
                     <p className="text-gray-600">Despite challenges, we adapted to virtual formats and continued to grow our community, reaching over 200 members.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-4 h-4 bg-green-600 rounded-full mt-2 mr-6 flex-shrink-0"></div>
                   <div>
@@ -144,7 +144,7 @@ const About = () => {
                     <p className="text-gray-600">Won multiple awards for outstanding student organization and community service initiatives.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-4 h-4 bg-orange-600 rounded-full mt-2 mr-6 flex-shrink-0"></div>
                   <div>
@@ -197,7 +197,7 @@ const About = () => {
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
             Leadership Team
           </h2>
-          
+
           {/* Faculty Coordinator */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-center mb-8 text-gray-700">Faculty Coordinator</h3>
@@ -214,44 +214,44 @@ const About = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Student Leadership */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-center mb-8 text-gray-700">Student Leadership</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">AJ</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">AC</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-gray-800">Ashutosh Chatterjee</h3>
+                <p className="text-blue-600 font-medium mb-4">President</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  BCA, Final Year. Leading the club with vision and passion for community building.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-800">Abhishek K Jha</h3>
-              <p className="text-blue-600 font-medium mb-4">President</p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                B.Tech, Final Year. Leading the club with vision and passion for community building.
-              </p>
-            </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">AC</span>
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">JM</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-gray-800">Jayanti Maurya</h3>
+                <p className="text-purple-600 font-medium mb-4">Vice President</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  B.Tech, 3rd Year. Coordinating events and fostering member engagement.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-800">Ashutosh Chatterjee</h3>
-              <p className="text-purple-600 font-medium mb-4">Vice President</p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                BCA, Final Year. Coordinating events and fostering member engagement.
-              </p>
-            </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">JM</span>
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">UJ</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-gray-800">Ujwal Singh</h3>
+                <p className="text-green-600 font-medium mb-4">Secretary</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  B.Tech, 3rd Year. Managing communications and organizational activities.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-800">Jayanti Maurya</h3>
-              <p className="text-green-600 font-medium mb-4">Secretary</p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                B.Tech, 3rd Year. Managing communications and organizational activities.
-              </p>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -262,77 +262,151 @@ const About = () => {
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
             Our Team Members
           </h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold text-white">US</span>
+                <span className="text-lg font-bold text-white">SP</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Ujwal Singh</h4>
-              <p className="text-blue-600 text-sm font-medium mb-2">Event Head</p>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Shlok Pandey</h4>
               <p className="text-gray-600 text-xs">B.Tech, 3rd Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">SS</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Shivali Srivastava</h4>
+              <p className="text-gray-600 text-xs">B.Pharm, 2nd Year</p>
             </div>
 
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold text-white">KR</span>
+                <span className="text-lg font-bold text-white">SK</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Khushi Rani</h4>
-              <p className="text-purple-600 text-sm font-medium mb-2">Creative Head</p>
-              <p className="text-gray-600 text-xs">B.Tech, 3rd Year</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold text-white">TA</span>
-              </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Mo. Tauheed Ansari</h4>
-              <p className="text-green-600 text-sm font-medium mb-2">Technical Lead</p>
-              <p className="text-gray-600 text-xs">BCA, 3rd Year</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold text-white">JS</span>
-              </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Janhvi Singh</h4>
-              <p className="text-orange-600 text-sm font-medium mb-2">Social Media Manager</p>
-              <p className="text-gray-600 text-xs">B.Tech, 3rd Year</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold text-white">SP</span>
-              </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Shlok Pandey</h4>
-              <p className="text-indigo-600 text-sm font-medium mb-2">Poetry Head</p>
-              <p className="text-gray-600 text-xs">B.Tech, 3rd Year</p>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Sachin Kumar Singh</h4>
+              <p className="text-gray-600 text-xs">B.Pharm, 2nd Year</p>
             </div>
 
             <div className="bg-gradient-to-br from-teal-50 to-green-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-lg font-bold text-white">AS</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Aradhya Singh</h4>
-              <p className="text-teal-600 text-sm font-medium mb-2">Public Relations</p>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Aradhy Singh</h4>
               <p className="text-gray-600 text-xs">B.Tech, 2nd Year</p>
             </div>
 
             <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold text-white">AD</span>
+                <span className="text-lg font-bold text-white">AK</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Amit Dubey</h4>
-              <p className="text-rose-600 text-sm font-medium mb-2">Content Writer</p>
-              <p className="text-gray-600 text-xs">Journalism, 1st Year</p>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Abhishek Kumar Sharma</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 2nd Year</p>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-lg font-bold text-white">ST</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800">Sanya Tiwari</h4>
-              <p className="text-cyan-600 text-sm font-medium mb-2">Photography Head</p>
-              <p className="text-gray-600 text-xs">Visual Arts, 2nd Year</p>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Abhijeet Kumar Singh</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 2nd Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">SG</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Shlok Gupta</h4>
+              <p className="text-gray-600 text-xs">B.Pharm, 2nd Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">RU</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Ritesh Upadhyay</h4>
+              <p className="text-gray-600 text-xs">B.Pharm, 2nd Year</p>
+            </div>
+
+            {/* New Members */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">MA</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Md. Aman</h4>
+              <p className="text-gray-600 text-xs">BCA, 1st Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-violet-50 to-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-violet-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">SK</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Sarthak Kasera</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 1st Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">MS</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Mohit Singh</h4>
+              <p className="text-gray-600 text-xs">BCA, 1st Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-fuchsia-50 to-pink-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">RP</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Rishika Pathak</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 1st Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-sky-50 to-indigo-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">RI</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Risha</h4>
+              <p className="text-gray-600 text-xs">BCA, 1st Year</p>
+            </div>
+
+            {/* <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">PM</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Priya Mishra</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 1st Year</p>
+            </div>*/}
+
+            {/* <div className="bg-gradient-to-br from-lime-50 to-green-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-lime-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">PK</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Prince Kumar Yadav</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 1st Year</p>
+            </div>*/}
+
+            {/* <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">NK</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Nishu Kumar Gupta</h4>
+              <p className="text-gray-600 text-xs">B.Tech, 1st Year</p>
+            </div>*/}
+
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">RT</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Ridhima Tripathi</h4>
+              <p className="text-gray-600 text-xs">BCA, 1st Year</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-lg font-bold text-white">KK</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800">Kumar Kartikey Sahu</h4>
+              <p className="text-gray-600 text-xs">BCA, 1st Year</p>
             </div>
           </div>
         </div>

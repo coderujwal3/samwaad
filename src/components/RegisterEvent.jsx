@@ -159,28 +159,14 @@ const RegisterEvent = ({ eventName }) => {
             {/* Talent */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Speech className="w-4 h-4" /> Debate Language
+                <Speech className="w-4 h-4" /> Upload Image of Your Poetry
               </label>
               <input
-                type="text"
-                name="debate"
-                value={form.debate}
+                type="file"
+                name="Poetry"
+                value={form.Poetry}
                 onChange={handleChange}
-                placeholder="English or Hindi"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Speech className="w-4 h-4" /> For or Against
-              </label>
-              <input
-                type="text"
-                name="stance"
-                value={form.stance}
-                onChange={handleChange}
-                placeholder="For or Against"
+                placeholder="Drag your Poetry"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               />
