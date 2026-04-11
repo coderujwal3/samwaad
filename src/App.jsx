@@ -52,13 +52,13 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:text-gray-100">
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Navigation
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         onJoinClick={() => setShowJoinModal(true)}
       />
-      <main className="pt-16">{renderPage()}</main>
+      <main className="pt-16 uppercase-first">{renderPage()}</main>
       <Footer />
       {showJoinModal && <JoinModal onClose={() => setShowJoinModal(false)} />}
     </div>

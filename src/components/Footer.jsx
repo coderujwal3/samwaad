@@ -3,7 +3,8 @@ import { FacebookIcon, TwitterIcon, InstagramIcon, Linkedin, Mail, Phone, MapPin
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-slate-950 text-white transition-colors duration-300">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row gap-8 justify-between">
           {/* Club Info */}
