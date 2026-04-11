@@ -93,7 +93,8 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="min-h-screen" data-scroll-section>
+    <div className="min-h-screen transition-colors duration-300" data-scroll-section>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-indigo-800 text-white py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -110,20 +111,24 @@ const Gallery = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Our Achievements
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => {
               const IconComponent = achievement.icon;
               return (
-                <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-50 to-white dark:from-slate-800 dark:to-slate-900 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+
                   <div className={`w-16 h-16 ${achievement.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800">{achievement.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{achievement.title}</h3>
+
                 </div>
               );
             })}
@@ -132,12 +137,14 @@ const Gallery = () => {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-gray-50 dark:bg-slate-950 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-4">
-            <h2 className="text-4xl font-bold text-gray-800">
+            <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
               Photo Gallery
             </h2>
+
             <div className="flex items-center gap-3">
               {!isSelectionMode ? (
                 <button
@@ -151,8 +158,9 @@ const Gallery = () => {
                 <>
                   <button
                     onClick={selectAll}
-                    className="flex items-center gap-2 border border-gray-300 text-gray-600 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors"
+                    className="flex items-center gap-2 border border-gray-300 dark:border-slate-700 text-gray-600 dark:text-gray-400 px-6 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
                   >
+
                     {selectedIds.size === galleryImages.length ? 'Deselect All' : 'Select All'}
                   </button>
                   <button
@@ -161,8 +169,9 @@ const Gallery = () => {
                     className={`flex items-center gap-2 px-6 py-2 rounded-full transition-colors shadow-md ${
                       selectedIds.size > 0 
                       ? 'bg-green-600 text-white hover:bg-green-700' 
-                      : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                      : 'bg-gray-200 dark:bg-slate-800 text-gray-400 dark:text-gray-600 cursor-not-allowed'
                     }`}
+
                   >
                     <Download className="w-4 h-4" />
                     Download ({selectedIds.size})
@@ -185,9 +194,10 @@ const Gallery = () => {
             {galleryImages.map((image) => (
               <div
                 key={image.id}
-                className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105 ${
+                className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-800 ${
                   isSelectionMode && selectedIds.has(image.id) ? 'ring-4 ring-indigo-500 scale-105' : ''
                 }`}
+
                 onClick={() => isSelectionMode ? toggleSelection(image.id) : setSelectedImage(image.url)}
               >
                 <img
@@ -199,8 +209,9 @@ const Gallery = () => {
                 {/* Selection Overlay */}
                 {isSelectionMode && (
                   <div className={`absolute top-4 right-4 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                    selectedIds.has(image.id) ? 'bg-indigo-500 text-white' : 'bg-white/50 text-gray-600'
+                    selectedIds.has(image.id) ? 'bg-indigo-500 text-white' : 'bg-white/50 dark:bg-slate-800/50 text-gray-600 dark:text-gray-300'
                   }`}>
+
                     {selectedIds.has(image.id) ? <CheckCircle2 className="w-6 h-6" /> : <Circle className="w-6 h-6" />}
                   </div>
                 )}
@@ -212,7 +223,8 @@ const Gallery = () => {
                     <h3 className="text-white font-semibold text-lg mb-1">{image.title}</h3>
                     <div className="flex items-center justify-between">
                       <span className="text-gray-300 text-sm">{image.date}</span>
-                      <span className="bg-white/20 text-white px-2 py-1 rounded-full text-xs">
+                      <span className="bg-white/20 dark:bg-slate-900/40 text-white px-2 py-1 rounded-full text-xs">
+
                         {image.category}
                       </span>
                     </div>
@@ -226,13 +238,16 @@ const Gallery = () => {
       </section>
 
       {/* Video Highlights */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Video Highlights
           </h2>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-950 p-8 rounded-2xl border border-transparent dark:border-slate-800 shadow-md">
+
               <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-6">
                 <div className="text-center text-white">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -241,13 +256,15 @@ const Gallery = () => {
                   <p className="text-lg font-medium">Annual Summit 2024</p>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">Communication Summit Highlights</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Communication Summit Highlights</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+
                 Relive the best moments from our biggest event of the year, featuring keynote speakers, workshops, and networking sessions.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-950 p-8 rounded-2xl border border-transparent dark:border-slate-800 shadow-md">
+
               <div className="aspect-video bg-gradient-to-br from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <div className="text-center text-white">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -256,8 +273,9 @@ const Gallery = () => {
                   <p className="text-lg font-medium">Club Journey</p>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">Our Journey So Far</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Our Journey So Far</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+
                 A compilation of our growth, achievements, and memorable moments from the past five years of SAMWAAD CLUB.
               </p>
             </div>

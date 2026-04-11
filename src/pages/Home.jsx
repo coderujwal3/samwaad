@@ -114,7 +114,8 @@ const Home = ({ onNavigate }) => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen transition-colors duration-300">
+
       {/* Hero Section */}
       <section
         id="hero-section"
@@ -180,101 +181,109 @@ const Home = ({ onNavigate }) => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Why Join SAMWAAD CLUB?
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Community
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Connect with like-minded peers and build lasting friendships
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Events
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Participate in exciting workshops, seminars, and cultural
                 activities
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-blue-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-900 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Camera className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Memories
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Create unforgettable memories through our diverse club
                 activities
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-red-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-red-50 dark:from-slate-800 dark:to-slate-900 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Growth
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Develop leadership skills and enhance your personal growth
               </p>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Statistics Section */}
-      <section className="py-20 px-4 bg-gray-100">
+      <section className="py-20 px-4 bg-gray-100 dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2">300+</div>
-              <div className="text-gray-600 font-medium">Active Members</div>
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">300+</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">Active Members</div>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
-              <div className="text-gray-600 font-medium">Events Organized</div>
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
+              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">50+</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">Events Organized</div>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-green-600 mb-2">3</div>
-              <div className="text-gray-600 font-medium">Years Active</div>
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
+              <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">3</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">Years Active</div>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-orange-600 mb-2">10+</div>
-              <div className="text-gray-600 font-medium">Awards Won</div>
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
+              <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">10+</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">Awards Won</div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             What Our Members Say
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {["Aarav Sharma", "Priya Patel", "Rahul Kumar"].map((name, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl"
+                className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-2xl shadow-lg"
               >
+
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -283,7 +292,8 @@ const Home = ({ onNavigate }) => {
                     />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+
                   {idx === 0
                     ? `"SAMWAAD CLUB has been an incredible journey of growth and friendship. The events and community here are absolutely amazing!"`
                     : idx === 1
@@ -295,8 +305,10 @@ const Home = ({ onNavigate }) => {
                     {name[0]}
                   </div>
                   <div className="ml-4">
-                    <div className="font-semibold text-gray-800">{name}</div>
-                    <div className="text-sm text-gray-500">
+                    <div className="font-semibold text-gray-800 dark:text-white">{name}</div>
+
+                    <div className="text-sm text-gray-500 dark:text-gray-400">
+
                       {idx === 0
                         ? "Computer Science, 3rd Year"
                         : idx === 1

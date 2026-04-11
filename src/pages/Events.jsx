@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 //import DebateImage from "../assets/pics/DEBATE.png";
+import PoetryImage from "../assets/pics/poetry.png";
+
 import {
   Calendar,
   Clock,
@@ -29,8 +31,8 @@ const Events = () => {
         "A contest where participants perform poems aloud, focusing on expression, voice modulation, and interpretation",
       category: "Poetry Competition",
       attendees: 50,
-      image:
-        "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: PoetryImage,
+
       isOpen: true,
     },
     {
@@ -158,17 +160,20 @@ const Events = () => {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Upcoming Events
           </h2>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {upcomingEvents.map((event) => (
               <div
                 key={event.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
+
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative overflow-hidden">
                   <img
                     src={event.image}
@@ -183,37 +188,40 @@ const Events = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">
                     {event.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
                     {event.description}
                   </p>
 
+
                   <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                       <Calendar className="w-4 h-4 mr-2" />
                       {event.date}
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                       <Clock className="w-4 h-4 mr-2" />
                       {event.time}
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                       <MapPin className="w-4 h-4 mr-2" />
                       {event.location}
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                       <Users className="w-4 h-4 mr-2" />
                       {event.attendees} expected attendees
                     </div>
+
                   </div>
 
                   <button
                     className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center ${event.isOpen !== false
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
-                      : "bg-gray-200 text-gray-500 cursor-not-allowed"
+                      : "bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
                       }`}
+
                     onClick={() => {
                       if (event.isOpen !== false) {
                         setShowRegister(true);
@@ -239,57 +247,66 @@ const Events = () => {
           onClick={handleClose}
         >
           <div
-            className="max-w-lg w-full relative bg-white rounded-2xl shadow-lg max-h-[90vh] overflow-y-auto"
+            className="max-w-lg w-full relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg max-h-[90vh] overflow-y-auto transition-colors duration-300"
             onClick={(e) => e.stopPropagation()}
           >
+
             <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold z-10"
+              className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white text-2xl font-bold z-10"
               onClick={handleClose}
               aria-label="Close"
             >
               &times;
             </button>
+
             <RegisterEvent eventName={selectedEvent} />
           </div>
         </div>
       )}
 
       {/* Past Events */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Past Events
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pastEvents.map((event) => (
               <div
                 key={event.id}
-                className="bg-transparent p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                <h3 className="text-xl font-bold mb-3 text-gray-800">
+
+                <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">
                   {event.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
                   {event.description}
                 </p>
 
+
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center text-sm text-gray-500">
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                     <Calendar className="w-4 h-4 mr-2" />
                     {event.date}
                   </div>
+
                   <div className="flex items-center">
                     <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {event.rating}
                     </span>
+
                   </div>
                 </div>
 
-                <div className="flex items-center text-sm text-gray-500">
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                   <Users className="w-4 h-4 mr-2" />
                   {event.attendees} attendees
                 </div>
+
               </div>
             ))}
           </div>
@@ -297,59 +314,62 @@ const Events = () => {
       </section>
 
       {/* Event Categories */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
+
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Event Categories
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Workshops
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Skill-building sessions led by experts
               </p>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Competitions
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Contests to showcase your talents
               </p>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Cultural Events
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Celebrating diversity and creativity
               </p>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
                 Networking
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Connect with peers and professionals
               </p>
             </div>
+
           </div>
         </div>
       </section>
