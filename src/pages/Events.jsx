@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 //import DebateImage from "../assets/pics/DEBATE.png";
+import PoetryImage from "../assets/pics/poetry.png";
+
 import {
   Calendar,
   Clock,
@@ -29,8 +31,8 @@ const Events = () => {
         "A contest where participants perform poems aloud, focusing on expression, voice modulation, and interpretation",
       category: "Poetry Competition",
       attendees: 50,
-      image:
-        "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: PoetryImage,
+
       isOpen: true,
     },
     {
