@@ -34,6 +34,7 @@ const Events = () => {
       image: PoetryImage,
 
       isOpen: true,
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScwGUpQOLu4gUgWLBYLfuovK8MUyPppr_cj8cuXQHZEaEzf3A/viewform?usp=publish-editor",
     },
     {
       id: 2,
@@ -224,8 +225,12 @@ const Events = () => {
 
                     onClick={() => {
                       if (event.isOpen !== false) {
-                        setShowRegister(true);
-                        setSelectedEvent(event.title);
+                        if (event.registrationLink) {
+                          window.open(event.registrationLink, "_blank");
+                        } else {
+                          setShowRegister(true);
+                          setSelectedEvent(event.title);
+                        }
                       }
                     }}
                     disabled={event.isOpen === false}

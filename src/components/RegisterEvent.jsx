@@ -6,8 +6,6 @@ const initialState = {
   department: "",
   year: "",
   semester: "",
-  debate: "",
-  stance: "",
   email: "",
   mobile: "",
 };
@@ -156,20 +154,30 @@ const RegisterEvent = ({ eventName }) => {
                 </select>
               </div>
             </div>
-            {/* Talent */}
+            {/* Poetry Drive Link */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Speech className="w-4 h-4" /> Upload Image of Your Poetry
-              </label>
-              <input
-                type="file"
-                name="Poetry"
-                value={form.Poetry}
+                <Speech className="w-4 h-4" /> Upload your poetry on the drive link </label>
+              <div className="mb-2 p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg break-all">
+                <span className="text-xs font-semibold text-blue-800 dark:text-blue-300 uppercase tracking-wider block mb-1">Drive Link:</span>
+                <a
+                  href="https://drive.google.com/drive/folders/1QEJJHpKLMSnsTRWkbQWfvId-jL-AfDIL?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline text-sm break-all"
+                >
+                  https://drive.google.com/drive/folders/1QEJJHpKLMSnsTRWkbQWfvId-jL-AfDIL?usp=drive_link
+                </a>
+              </div>
+              {/* <input
+                type="url"
+                name="poetryLink"
+                value={form.poetryLink}
                 onChange={handleChange}
-                placeholder="Drag your Poetry"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                placeholder="Paste your shared folder/file link here"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
-              />
+              /> */}
             </div>
             {/* Email */}
             <div>
