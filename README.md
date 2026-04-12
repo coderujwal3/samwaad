@@ -22,8 +22,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kumarkartikeysahu-collab"><img src="https://avatars.githubusercontent.com/u/e?email=nikhilsengar7012@gmail.com&s=60" width="60px;" alt="coderujwal3"/><br /><sub><b>Ujwal Singh</b></sub></a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/achatterjee0001"><br /><sub><b>Ashutosh Chatterjee</b></sub></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/coderujwal3"><img src="https://avatars.githubusercontent.com/u/e?email=nikhilsengar7012@gmail.com&s=60" width="60px;" alt="coderujwal3"/><br /><sub><b>Ujwal Singh</b></sub></a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/achatterjee0001"><img src="https://avatars.githubusercontent.com/u/e?email=ashutoshchatterjee0003@gmail.com&s=60" width="60px;" alt="achatterjee0001"/><br /><sub><b>Ashutosh Chatterjee</b></sub></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tauhid09"><br /><sub><b>Mohd. Tauheed</b></sub></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kumarkartikeysahu-collab"><br /><sub><b>kumarkartikeysahu-collab</b></sub></td>
     </tr>
