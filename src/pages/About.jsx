@@ -180,32 +180,32 @@ const About = () => {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                   <span className="text-gray-600 dark:text-gray-400">
-Weekly discussion sessions and debates</span>
+                    Weekly discussion sessions and debates</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
                   <span className="text-gray-600 dark:text-gray-400">
-Workshops on public speaking and communication</span>
+                    Workshops on public speaking and communication</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
                   <span className="text-gray-600 dark:text-gray-400">
-Cultural events and celebrations</span>
+                    Cultural events and celebrations</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
                   <span className="text-gray-600 dark:text-gray-400">
-Community service and outreach programs</span>
+                    Community service and outreach programs</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
                   <span className="text-gray-600 dark:text-gray-400">
-Leadership development initiatives</span>
+                    Leadership development initiatives</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
                   <span className="text-gray-600 dark:text-gray-400">
-Inter-college competitions and collaborations</span>
+                    Inter-college competitions and collaborations</span>
                 </div>
               </div>
             </div>
@@ -345,9 +345,17 @@ Inter-college competitions and collaborations</span>
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
                 <span className="text-lg font-bold text-white">SG</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">Shlok Gupta</h4>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">Sujal Gupta</h4>
               <p className="text-gray-600 dark:text-gray-400 text-xs">B.Pharm, 2nd Year</p>
             </div>
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-slate-800 dark:to-slate-900 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-800">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <span className="text-lg font-bold text-white">SK</span>
+              </div>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">Saurabh Kumar Singh</h4>
+              <p className="text-gray-600 dark:text-gray-400 text-xs">B.Pharm, 2nd Year</p>
+            </div>
+
 
             <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-900 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-800">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">

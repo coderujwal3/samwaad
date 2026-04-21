@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import RegisterEvent from "../components/RegisterEvent";
+import EventDetailsModal from "../components/EventDetailsModal";
 
 const Events = () => {
   const [showRegister, setShowRegister] = useState(false);
@@ -18,13 +19,15 @@ const Events = () => {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterResult, setNewsletterResult] = useState("");
   const [newsletterLoading, setNewsletterLoading] = useState(false);
+  const [showEventDetails, setShowEventDetails] = useState(false);
+  const [selectedPastEvent, setSelectedPastEvent] = useState(null);
 
   const upcomingEvents = [
     {
       id: 1,
       title: "Poetry Recitation Comptetion",
 
-      date: "April 15, 2026",
+      date: "Soon to be announced",
       time: "1:30 PM - 3:45 PM",
       location: "CRC 3rd Floor",
       description:
@@ -33,7 +36,7 @@ const Events = () => {
       attendees: 50,
       image: PoetryImage,
 
-      isOpen: true,
+      isOpen: false,
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScwGUpQOLu4gUgWLBYLfuovK8MUyPppr_cj8cuXQHZEaEzf3A/viewform?usp=publish-editor",
     },
     {
@@ -56,12 +59,41 @@ const Events = () => {
     {
 
       id: 8,
-      title: "Inter-Department Debate",
+      title: "Inter Debate Competition",
       date: "April 9, 2026",
       description:
-        "An engaging debate competition between departments. Each department was represented by 4 participants.",
+        "A vibrant debate competition featuring both English and Hindi language categories. Participants from various departments showcased their exceptional oratorical skills.",
       attendees: 50,
       rating: 4.8,
+      category: "Debate Competition",
+      details: {
+        participants: [
+          {
+            category: "English Debate",
+            names: [
+              "Sankalp Mishra", "Satwik Srivastav", "Anupriya Jha",
+              "Anushka Jaiswal", "Soham Dutta", "Diksha Singh",
+              "Janhavi Singh", "Ridhima Tripathi", "Manya Jaiswal"
+            ]
+          },
+          {
+            category: "Hindi Debate",
+            names: [
+              "Priyanshu Kumar Soni", "Amit Kumar",
+              "Shivam Kumar", "Varun Pathak"
+            ]
+          }
+        ],
+        judges: [
+          { name: "Mr. Vivek Singh", title: "Faculty Judge" },
+          { name: "Mr. Satish Vishwakarma", title: "External Judge" }
+        ],
+        winners: [
+          { position: "Winner (English)", name: "Sankalp Mishra" },
+          { position: "Runner Up (English)", name: "Satwik Srivastav" },
+          { position: "Top Hindi Speaker", name: "Priyanshu Kumar Soni" }
+        ]
+      }
     },
     {
       id: 7,
@@ -106,6 +138,8 @@ const Events = () => {
   const handleClose = () => {
     setShowRegister(false);
     setSelectedEvent(null);
+    setShowEventDetails(false);
+    setSelectedPastEvent(null);
   };
 
   const handleNewsletterSubmit = async (e) => {
@@ -281,7 +315,13 @@ const Events = () => {
             {pastEvents.map((event) => (
               <div
                 key={event.id}
-                className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className={`bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${event.details ? 'cursor-pointer hover:border-blue-500' : ''}`}
+                onClick={() => {
+                  if (event.details) {
+                    setSelectedPastEvent(event);
+                    setShowEventDetails(true);
+                  }
+                }}
               >
 
                 <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">
@@ -317,6 +357,13 @@ const Events = () => {
           </div>
         </div>
       </section>
+
+      {/* Past Event Details Modal */}
+      <EventDetailsModal
+        isOpen={showEventDetails}
+        onClose={handleClose}
+        event={selectedPastEvent}
+      />
 
       {/* Event Categories */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
