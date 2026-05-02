@@ -416,9 +416,9 @@ const About = () => {
 
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-800">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <span className="text-lg font-bold text-white">KK</span>
+                <span className="text-lg font-bold text-white">KS</span>
               </div>
-              <h4 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">Kumar Kartikey Sahu</h4>
+              <h4 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">Kartikey Sahu</h4>
               <p className="text-gray-600 dark:text-gray-400 text-xs">BCA, 1st Year</p>
             </div>
           </div>
