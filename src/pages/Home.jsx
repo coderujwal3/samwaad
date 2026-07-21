@@ -151,13 +151,15 @@ const Home = ({ onNavigate }) => {
         {/* Canvas Section */}
         <div className="w-[80%] lg:w-[40%] flex justify-center items-center h-[42vh] sm:h-[32vh] lg:h-[80vh] max-h-[760px]">
           <div
-            className="parent w-full max-w-[760px] h-[80%] relative top-0 left-0"
+            className="parent w-full max-w-[760px] h-[80%] relative top-0 left-0 shadow-[0_10px_25px_rgba(0,0,0,0.7)] rounded-3xl overflow-hidden"
             ref={parentRef}
           >
             <div className="child w-full h-full lg:sticky lg:top-0 left-0 rounded-3xl z-99999 overflow-hidden">
               <Suspense
                 fallback={
-                  <div className="w-full h-full rounded-full animate-pulse [animation-duration-5s] border-8"></div>
+                  <div className="w-full h-full rounded-3xl border border-slate-500">
+                    <div className="h-full w-full animate-pulse [animation-duration-5s] border-8"></div>
+                  </div>
                 }
               >
                 <canvas
