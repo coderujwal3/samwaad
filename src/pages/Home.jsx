@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Suspense, lazy } from "react";
 import {
   Users,
   Calendar,
@@ -24,7 +24,7 @@ const Home = ({ onNavigate }) => {
     const frames = {
       current: 0,
       // maxIndex: 234, // for gd
-      maxIndex: 107,    // for debate
+      maxIndex: 107, // for debate
       images: [],
     };
 
@@ -39,7 +39,7 @@ const Home = ({ onNavigate }) => {
         img.onload = () => {
           imagesLoaded++;
           if (imagesLoaded === frames.maxIndex) {
-            console.log("All images loaded");
+            // console.log("All images loaded");
             loadFrame(0);
           }
         };
@@ -73,7 +73,7 @@ const Home = ({ onNavigate }) => {
     };
 
     // Scroll trigger limited to hero section only
-    
+
     const handleScroll = () => {
       const scrollSpeed = 0.8;
       // const scrollSpeed = 0.8;
@@ -90,7 +90,7 @@ const Home = ({ onNavigate }) => {
         // 🔥 Here's the key line:
         const frameIndex = Math.min(
           frames.maxIndex - 1,
-          Math.floor((scrollProgress * frames.maxIndex) / scrollSpeed)
+          Math.floor((scrollProgress * frames.maxIndex) / scrollSpeed),
         );
 
         requestAnimationFrame(() => loadFrame(frameIndex));
@@ -98,7 +98,8 @@ const Home = ({ onNavigate }) => {
     };
 
     // Resize canvas when window size changes
-    const handleResize = () => requestAnimationFrame(() => loadFrame(frames.current));
+    const handleResize = () =>
+      requestAnimationFrame(() => loadFrame(frames.current));
 
     // load the images, and added event listener for scrolling and resizing
     preload();
@@ -110,12 +111,10 @@ const Home = ({ onNavigate }) => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-
   }, []);
 
   return (
     <div className="min-h-screen transition-colors duration-300">
-
       {/* Hero Section */}
       <section
         id="hero-section"
@@ -155,12 +154,18 @@ const Home = ({ onNavigate }) => {
             className="parent w-full max-w-[760px] h-[80%] relative top-0 left-0"
             ref={parentRef}
           >
-            <div className="child w-full h-full lg:sticky lg:top-0 left-0 rounded-3xl overflow-hidden">
-              <canvas
-                className="w-full h-full rounded-3xl"
-                id="frame"
-                ref={canvasRef}
-              ></canvas>
+            <div className="child w-full h-full lg:sticky lg:top-0 left-0 rounded-3xl z-99999 overflow-hidden">
+              <Suspense
+                fallback={
+                  <div className="w-full h-full rounded-full animate-pulse [animation-duration-5s] border-8"></div>
+                }
+              >
+                <canvas
+                  className="w-full h-full rounded-3xl"
+                  id="frame"
+                  ref={canvasRef}
+                ></canvas>
+              </Suspense>
             </div>
           </div>
         </div>
@@ -182,7 +187,6 @@ const Home = ({ onNavigate }) => {
 
       {/* Features Section */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
-
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Why Join SAMWAAD CLUB?
@@ -238,40 +242,52 @@ const Home = ({ onNavigate }) => {
                 Develop leadership skills and enhance your personal growth
               </p>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* Statistics Section */}
       <section className="py-20 px-4 bg-gray-100 dark:bg-slate-900 transition-colors duration-300">
-
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">300+</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium">Active Members</div>
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                300+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                Active Members
+              </div>
             </div>
             <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
-              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">50+</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium">Events Organized</div>
+              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                50+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                Events Organized
+              </div>
             </div>
             <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
-              <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">3</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium">Years Active</div>
+              <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
+                3
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                Years Active
+              </div>
             </div>
             <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg transition-colors border border-transparent dark:border-slate-700">
-              <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">10+</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium">Awards Won</div>
+              <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+                10+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                Awards Won
+              </div>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
-
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             What Our Members Say
@@ -283,7 +299,6 @@ const Home = ({ onNavigate }) => {
                 key={idx}
                 className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-2xl shadow-lg"
               >
-
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -293,7 +308,6 @@ const Home = ({ onNavigate }) => {
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-
                   {idx === 0
                     ? `"SAMWAAD CLUB has been an incredible journey of growth and friendship. The events and community here are absolutely amazing!"`
                     : idx === 1
@@ -305,10 +319,11 @@ const Home = ({ onNavigate }) => {
                     {name[0]}
                   </div>
                   <div className="ml-4">
-                    <div className="font-semibold text-gray-800 dark:text-white">{name}</div>
+                    <div className="font-semibold text-gray-800 dark:text-white">
+                      {name}
+                    </div>
 
                     <div className="text-sm text-gray-500 dark:text-gray-400">
-
                       {idx === 0
                         ? "Computer Science, 3rd Year"
                         : idx === 1
