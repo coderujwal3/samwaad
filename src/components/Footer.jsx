@@ -1,5 +1,5 @@
 import React from 'react';
-import { FacebookIcon, TwitterIcon, InstagramIcon, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -44,7 +44,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FacebookIcon className="w-5 h-5" />
+                <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="https://twitter.com/samwaadclub"
@@ -52,7 +52,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <TwitterIcon className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/kgi_samwaad_futures/"
@@ -60,7 +60,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <InstagramIcon className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="https://linkedin.com/company/samwaadclub"

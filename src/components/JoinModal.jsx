@@ -101,8 +101,8 @@ const JoinModal = ({ onClose }) => {
 
             >
               <option value="">Select Your Course</option>
-              <option value="B.Tech">B.Tech CSE</option>
-              <option value="B.Tech">B.Tech non-CSE</option>
+              <option value="B.Tech CSE">B.Tech CSE</option>
+              <option value="B.Tech non-CSE">B.Tech non-CSE</option>
               <option value="BCA">BCA</option>
               <option value="BBA">BBA</option>
               <option value="B.Pharma">B.Pharma</option>

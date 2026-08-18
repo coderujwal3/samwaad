@@ -86,7 +86,7 @@ const RegisterEvent = ({ eventName }) => {
           <form onSubmit={onSubmit} className="space-y-5">
             {/* Name */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                 <User className="w-4 h-4" /> Full Name
               </label>
               <input
@@ -95,20 +95,20 @@ const RegisterEvent = ({ eventName }) => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Enter your full name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               />
             </div>
             {/* Course */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                 <BookOpen className="w-4 h-4" /> Course
               </label>
               <select
                 name="department"
                 value={form.department}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               >
                 <option value="">Select Your Course</option>
@@ -120,14 +120,14 @@ const RegisterEvent = ({ eventName }) => {
             {/* Year & Semester */}
             <div className="flex gap-4">
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                   <Calendar className="w-4 h-4" /> Year
                 </label>
                 <select
                   name="year"
                   value={form.year}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   required
                 >
                   <option value="">Year</option>
@@ -137,14 +137,14 @@ const RegisterEvent = ({ eventName }) => {
                 </select>
               </div>
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                   <Calendar className="w-4 h-4" /> Semester
                 </label>
                 <select
                   name="semester"
                   value={form.semester}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   required
                 >
                   <option value="">Semester</option>
@@ -156,7 +156,7 @@ const RegisterEvent = ({ eventName }) => {
             </div>
             {/* Poetry Drive Link */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                 <Speech className="w-4 h-4" /> Upload your poetry on the drive link </label>
               <div className="mb-2 p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg break-all">
                 <span className="text-xs font-semibold text-blue-800 dark:text-blue-300 uppercase tracking-wider block mb-1">Drive Link:</span>
@@ -169,19 +169,10 @@ const RegisterEvent = ({ eventName }) => {
                   https://drive.google.com/drive/folders/1QEJJHpKLMSnsTRWkbQWfvId-jL-AfDIL?usp=drive_link
                 </a>
               </div>
-              {/* <input
-                type="url"
-                name="poetryLink"
-                value={form.poetryLink}
-                onChange={handleChange}
-                placeholder="Paste your shared folder/file link here"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                required
-              /> */}
             </div>
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                 <Mail className="w-4 h-4" /> Email Address
               </label>
               <input
@@ -190,13 +181,13 @@ const RegisterEvent = ({ eventName }) => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="samwaad@gmail.com"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               />
             </div>
             {/* Mobile */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center gap-2">
                 <Phone className="w-4 h-4" /> Contact Number
               </label>
               <input
@@ -206,7 +197,7 @@ const RegisterEvent = ({ eventName }) => {
                 onChange={handleChange}
                 placeholder="9876543210"
                 pattern="[0-9]{10,}"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                 required
               />
             </div>

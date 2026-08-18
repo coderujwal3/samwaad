@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 //import DebateImage from "../assets/pics/DEBATE.png";
-import PoetryImage from "../assets/pics/poetry.png";
+//import PoetryImage from "../assets/pics/poetry.png";
 
 import {
   Calendar,
+  CalendarX,
   Clock,
   MapPin,
   Users,
@@ -23,41 +24,11 @@ const Events = () => {
   const [selectedPastEvent, setSelectedPastEvent] = useState(null);
 
   const upcomingEvents = [
-    {
-      id: 1,
-      title: "Poetry Recitation Comptetion",
 
-      date: "Soon to be announced",
-      time: "1:30 PM - 3:45 PM",
-      location: "CRC 3rd Floor",
-      description:
-        "A contest where participants perform poems aloud, focusing on expression, voice modulation, and interpretation",
-      category: "Poetry Competition",
-      attendees: 50,
-      image: PoetryImage,
-
-      isOpen: false,
-      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScwGUpQOLu4gUgWLBYLfuovK8MUyPppr_cj8cuXQHZEaEzf3A/viewform?usp=publish-editor",
-    },
-    {
-      id: 2,
-      title: "Public Speaking Workshop",
-      date: "April 29, 2026",
-      time: "2:00 PM - 3:45 PM",
-      location: "CRC 2nd Floor",
-      description:
-        "Master the art of public speaking with expert trainers and practical exercises.",
-      category: "Workshop",
-      attendees: 50,
-      image:
-        "https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=800",
-      isOpen: false,
-    },
   ];
 
   const pastEvents = [
     {
-
       id: 8,
       title: "Inter Debate Competition",
       date: "April 9, 2026",
@@ -71,29 +42,37 @@ const Events = () => {
           {
             category: "English Debate",
             names: [
-              "Sankalp Mishra", "Satwik Srivastav", "Anupriya Jha",
-              "Anushka Jaiswal", "Soham Dutta", "Diksha Singh",
-              "Janhavi Singh", "Ridhima Tripathi", "Manya Jaiswal"
-            ]
+              "Sankalp Mishra",
+              "Satwik Srivastav",
+              "Anupriya Jha",
+              "Anushka Jaiswal",
+              "Soham Dutta",
+              "Diksha Singh",
+              "Janhavi Singh",
+              "Ridhima Tripathi",
+              "Manya Jaiswal",
+            ],
           },
           {
             category: "Hindi Debate",
             names: [
-              "Priyanshu Kumar Soni", "Amit Kumar",
-              "Shivam Kumar", "Varun Pathak"
-            ]
-          }
+              "Priyanshu Kumar Soni",
+              "Amit Kumar",
+              "Shivam Kumar",
+              "Varun Pathak",
+            ],
+          },
         ],
         judges: [
           { name: "Mr. Vivek Singh", title: "Faculty Judge" },
-          { name: "Mr. Satish Vishwakarma", title: "External Judge" }
+          { name: "Mr. Satish Vishwakarma", title: "Faculty Judge" },
         ],
         winners: [
           { position: "Winner (English)", name: "Sankalp Mishra" },
           { position: "Runner Up (English)", name: "Satwik Srivastav" },
-          { position: "Top Hindi Speaker", name: "Priyanshu Kumar Soni" }
-        ]
-      }
+          { position: "Top Hindi Speaker", name: "Priyanshu Kumar Soni" },
+        ],
+      },
     },
     {
       id: 7,
@@ -101,7 +80,7 @@ const Events = () => {
 
       date: "September 22, 2025",
       description:
-        "Grand begining of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
+        "Grand beginning of Navratri, the evening full of Dance, Devotion, Music, and creativity.",
       attendees: 150,
       rating: 4.9,
     },
@@ -196,86 +175,97 @@ const Events = () => {
 
       {/* Upcoming Events */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
-
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Upcoming Events
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {upcomingEvents.map((event) => (
-              <div
-                key={event.id}
-                className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative overflow-hidden">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-white/90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {event.category}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
-                    {event.description}
-                  </p>
-
-
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {event.date}
+          {upcomingEvents.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              {upcomingEvents.map((event) => (
+                <div
+                  key={event.id}
+                  className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative overflow-hidden">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover opacity-80"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white/90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {event.category}
+                      </span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <Clock className="w-4 h-4 mr-2" />
-                      {event.time}
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <MapPin className="w-4 h-4 mr-2" />
-                      {event.location}
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <Users className="w-4 h-4 mr-2" />
-                      {event.attendees} expected attendees
-                    </div>
-
                   </div>
 
-                  <button
-                    className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center ${event.isOpen !== false
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
-                      : "bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
-                      }`}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
+                      {event.description}
+                    </p>
 
-                    onClick={() => {
-                      if (event.isOpen !== false) {
-                        if (event.registrationLink) {
-                          window.open(event.registrationLink, "_blank");
-                        } else {
-                          setShowRegister(true);
-                          setSelectedEvent(event.title);
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {event.date}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {event.time}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        {event.location}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                        <Users className="w-4 h-4 mr-2" />
+                        {event.attendees} expected attendees
+                      </div>
+                    </div>
+
+                    <button
+                      className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center ${event.isOpen !== false
+                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+                        : "bg-gray-200 dark:bg-slate-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
+                        }`}
+                      onClick={() => {
+                        if (event.isOpen !== false) {
+                          if (event.registrationLink) {
+                            window.open(event.registrationLink, "_blank");
+                          } else {
+                            setShowRegister(true);
+                            setSelectedEvent(event.title);
+                          }
                         }
-                      }
-                    }}
-                    disabled={event.isOpen === false}
-                  >
-                    {event.isOpen !== false ? "Register Now" : "Open Soon"}
-                    {event.isOpen !== false && <ChevronRight className="w-4 h-4 ml-2" />}
-                  </button>
+                      }}
+                      disabled={event.isOpen === false}
+                    >
+                      {event.isOpen !== false ? "Register Now" : "Open Soon"}
+                      {event.isOpen !== false && (
+                        <ChevronRight className="w-4 h-4 ml-2" />
+                      )}
+                    </button>
+                  </div>
                 </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 px-6 bg-gradient-to-br from-blue-50/60 to-purple-50/60 dark:from-slate-800/60 dark:to-slate-900/60 rounded-3xl border border-gray-200/80 dark:border-slate-800 max-w-2xl mx-auto shadow-sm">
+              <div className="w-16 h-16 bg-blue-100 dark:bg-slate-700 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <CalendarX className="w-8 h-8" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                No Upcoming Events
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
+                We are currently planning our next exciting events and workshops.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -289,7 +279,6 @@ const Events = () => {
             className="max-w-lg w-full relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg max-h-[90vh] overflow-y-auto transition-colors duration-300"
             onClick={(e) => e.stopPropagation()}
           >
-
             <button
               className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white text-2xl font-bold z-10"
               onClick={handleClose}
@@ -305,7 +294,6 @@ const Events = () => {
 
       {/* Past Events */}
       <section className="py-20 px-4 bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
-
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Past Events
@@ -315,7 +303,7 @@ const Events = () => {
             {pastEvents.map((event) => (
               <div
                 key={event.id}
-                className={`bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${event.details ? 'cursor-pointer hover:border-blue-500' : ''}`}
+                className={`bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-transparent dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${event.details ? "cursor-pointer hover:border-blue-500" : ""}`}
                 onClick={() => {
                   if (event.details) {
                     setSelectedPastEvent(event);
@@ -323,14 +311,12 @@ const Events = () => {
                   }
                 }}
               >
-
                 <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">
                   {event.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
                   {event.description}
                 </p>
-
 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
@@ -343,7 +329,6 @@ const Events = () => {
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {event.rating}
                     </span>
-
                   </div>
                 </div>
 
@@ -351,7 +336,6 @@ const Events = () => {
                   <Users className="w-4 h-4 mr-2" />
                   {event.attendees} attendees
                 </div>
-
               </div>
             ))}
           </div>
@@ -367,7 +351,6 @@ const Events = () => {
 
       {/* Event Categories */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
-
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Event Categories
@@ -421,7 +404,6 @@ const Events = () => {
                 Connect with peers and professionals
               </p>
             </div>
-
           </div>
         </div>
       </section>

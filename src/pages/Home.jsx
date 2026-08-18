@@ -34,12 +34,10 @@ const Home = ({ onNavigate }) => {
     const preload = () => {
       for (let i = 1; i <= frames.maxIndex; i++) {
         const img = new Image();
-        // img.src = `/assets/frame30gd/frame_${i.toString().padStart(4, "0")}.jpeg`;
         img.src = `/assets/frames/frame_${i.toString().padStart(4, "0")}.jpeg`;
         img.onload = () => {
           imagesLoaded++;
-          if (imagesLoaded === frames.maxIndex) {
-            console.log("All images loaded");
+          if (i === 1 || imagesLoaded === 1) {
             loadFrame(0);
           }
         };
@@ -51,10 +49,11 @@ const Home = ({ onNavigate }) => {
     // Draw the frame
     const loadFrame = (idx) => {
       const img = frames.images[idx];
-      if (!img) return;
+      if (!img || !img.complete || !img.naturalWidth || !img.naturalHeight) return;
 
       canvas.width = parentDiv.offsetWidth;
       canvas.height = parentDiv.offsetHeight;
+      if (!canvas.width || !canvas.height) return;
 
       const scaleX = canvas.width / img.width;
       const scaleY = canvas.height / img.height;
@@ -73,7 +72,7 @@ const Home = ({ onNavigate }) => {
     };
 
     // Scroll trigger limited to hero section only
-    
+
     const handleScroll = () => {
       const scrollSpeed = 0.8;
       // const scrollSpeed = 0.8;
@@ -335,7 +334,7 @@ const Home = ({ onNavigate }) => {
           </p>
           <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg inline-flex items-center">
             <a
-              href="https://chat.whatsapp.com/JzY84VFRkZVLmiBlt5HY78"
+              href="https://chat.whatsapp.com/GPO5gftVzBEJVnP4DpEh1D"
               target="_blank"
             >
               Get Started Today
