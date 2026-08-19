@@ -40,6 +40,9 @@ const Home = ({ onNavigate }) => {
           if (i === 1 || imagesLoaded === 1) {
             loadFrame(0);
           }
+          if (imagesLoaded === frames.maxIndex) {
+            // console.log("All images loaded");
+          }
         };
         img.onerror = () => console.error("Failed to load:", img.src);
         frames.images.push(img);

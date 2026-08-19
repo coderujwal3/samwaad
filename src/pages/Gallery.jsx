@@ -218,8 +218,8 @@ const Gallery = () => {
                       onClick={handleDownloadSelected}
                       disabled={selectedIds.size === 0}
                       className={`flex items-center gap-2 px-5 py-2 rounded-full transition-colors shadow-md text-sm font-medium ${selectedIds.size > 0
-                          ? 'bg-green-600 text-white hover:bg-green-700'
-                          : 'bg-gray-200 dark:bg-slate-800 text-gray-400 dark:text-gray-600 cursor-not-allowed'
+                        ? 'bg-green-600 text-white hover:bg-green-700'
+                        : 'bg-gray-200 dark:bg-slate-800 text-gray-400 dark:text-gray-600 cursor-not-allowed'
                         }`}
                     >
                       <Download className="w-4 h-4" />
@@ -245,23 +245,23 @@ const Gallery = () => {
               <div
                 onClick={() => setSelectedFolder('all')}
                 className={`cursor-pointer rounded-2xl p-5 transition-all duration-300 border ${selectedFolder === 'all'
-                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl scale-[1.02] border-transparent'
-                    : 'bg-white dark:bg-slate-900 text-gray-800 dark:text-white border-gray-200 dark:border-slate-800 hover:shadow-md hover:border-blue-400 dark:hover:border-slate-700'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl scale-[1.02] border-transparent'
+                  : 'bg-white dark:bg-slate-900 text-gray-800 dark:text-white border-gray-200 dark:border-slate-800 hover:shadow-md hover:border-blue-400 dark:hover:border-slate-700'
                   }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center ${selectedFolder === 'all'
-                        ? 'bg-white/20 text-white'
-                        : 'bg-blue-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400'
+                      ? 'bg-white/20 text-white'
+                      : 'bg-blue-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400'
                       }`}
                   >
                     <Images className="w-6 h-6" />
                   </div>
                   <span
                     className={`text-xs px-2.5 py-1 rounded-full font-semibold ${selectedFolder === 'all'
-                        ? 'bg-white/20 text-white'
-                        : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400'
+                      ? 'bg-white/20 text-white'
+                      : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400'
                       }`}
                   >
                     {galleryImages.length} Photos
@@ -284,15 +284,15 @@ const Gallery = () => {
                     key={folder.key}
                     onClick={() => setSelectedFolder(folder.key)}
                     className={`cursor-pointer rounded-2xl p-5 transition-all duration-300 border ${isSelected
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-xl scale-[1.02] border-transparent'
-                        : 'bg-white dark:bg-slate-900 text-gray-800 dark:text-white border-gray-200 dark:border-slate-800 hover:shadow-md hover:border-purple-400 dark:hover:border-slate-700'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-xl scale-[1.02] border-transparent'
+                      : 'bg-white dark:bg-slate-900 text-gray-800 dark:text-white border-gray-200 dark:border-slate-800 hover:shadow-md hover:border-purple-400 dark:hover:border-slate-700'
                       }`}
                   >
                     <div className="flex items-center justify-between mb-3">
                       <div
                         className={`w-12 h-12 rounded-xl flex items-center justify-center ${isSelected
-                            ? 'bg-white/20 text-white'
-                            : 'bg-purple-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400'
+                          ? 'bg-white/20 text-white'
+                          : 'bg-purple-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400'
                           }`}
                       >
                         {isSelected ? (
@@ -303,8 +303,8 @@ const Gallery = () => {
                       </div>
                       <span
                         className={`text-xs px-2.5 py-1 rounded-full font-semibold ${isSelected
-                            ? 'bg-white/20 text-white'
-                            : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400'
+                          ? 'bg-white/20 text-white'
+                          : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400'
                           }`}
                       >
                         {folder.count} Photos
@@ -313,8 +313,8 @@ const Gallery = () => {
                     <h3 className="text-lg font-bold">{folder.label}</h3>
                     <p
                       className={`text-xs mt-1 truncate ${isSelected
-                          ? 'text-purple-100'
-                          : 'text-gray-500 dark:text-gray-400'
+                        ? 'text-purple-100'
+                        : 'text-gray-500 dark:text-gray-400'
                         }`}
                     >
                       Folder: {folder.key}
@@ -324,7 +324,6 @@ const Gallery = () => {
               })}
             </div>
 
-            {/* Filter Pills */}
           </div>
 
           {/* Photo Grid */}
@@ -333,8 +332,8 @@ const Gallery = () => {
               <div
                 key={image.id}
                 className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-800 bg-gray-100 dark:bg-slate-800 ${isSelectionMode && selectedIds.has(image.id)
-                    ? 'ring-4 ring-indigo-500 scale-105'
-                    : ''
+                  ? 'ring-4 ring-indigo-500 scale-105'
+                  : ''
                   }`}
                 onClick={() =>
                   isSelectionMode ? toggleSelection(image.id) : setSelectedImage(image.url)
@@ -359,8 +358,8 @@ const Gallery = () => {
                 {isSelectionMode && (
                   <div
                     className={`absolute top-4 right-4 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow-md ${selectedIds.has(image.id)
-                        ? 'bg-indigo-500 text-white'
-                        : 'bg-white/70 dark:bg-slate-800/70 text-gray-700 dark:text-gray-300'
+                      ? 'bg-indigo-500 text-white'
+                      : 'bg-white/70 dark:bg-slate-800/70 text-gray-700 dark:text-gray-300'
                       }`}
                   >
                     {selectedIds.has(image.id) ? (
