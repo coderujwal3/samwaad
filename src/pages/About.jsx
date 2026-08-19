@@ -231,10 +231,10 @@ const About = () => {
                 <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
                   <span className="text-2xl font-bold text-white">AT</span>
                 </div>
-                <h4 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Assist. Prof. Archana Triphati</h4>
+                <h4 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Assist. Prof. Archana Tripathi</h4>
                 <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4">Faculty Coordinator</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Assistent Professor, Department of Management. Guiding the club with expertise and mentorship.
+                  Assistant Professor, Department of Management. Guiding the club with expertise and mentorship.
                 </p>
               </div>
 
