@@ -400,51 +400,6 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Video Highlights */}
-      <section className="py-20 px-4 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
-            Video Highlights
-          </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-950 p-8 rounded-2xl border border-transparent dark:border-slate-800 shadow-md">
-              <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center text-white">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-0 h-0 border-l-8 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
-                  </div>
-                  <p className="text-lg font-medium">Annual Summit 2024</p>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-                Communication Summit Highlights
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Relive the best moments from our biggest event of the year, featuring keynote speakers, workshops, and networking sessions.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-950 p-8 rounded-2xl border border-transparent dark:border-slate-800 shadow-md">
-              <div className="aspect-video bg-gradient-to-br from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center text-white">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-0 h-0 border-l-8 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
-                  </div>
-                  <p className="text-lg font-medium">Club Journey</p>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-                Our Journey So Far
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                A compilation of our growth, achievements, and memorable moments from the past five years of SAMWAAD CLUB.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Modal for Image Viewer */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 z-50">
@@ -472,7 +427,11 @@ const Gallery = () => {
             Join us and create memories that will last a lifetime. Your story could be the next highlight in our gallery!
           </p>
           <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
-            <a href="https://chat.whatsapp.com/JzY84VFRkZVLmiBlt5HY78">Join Samwaad</a>
+            <a
+              href="https://chat.whatsapp.com/GPO5gftVzBEJVnP4DpEh1D"
+              target="_blank"
+            >
+              Join Samwaad</a>
           </button>
         </div>
       </section>

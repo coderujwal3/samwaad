@@ -253,7 +253,7 @@ const About = () => {
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Shivali Srivastava</h3>
                 <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">President</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  BCA, Final Year. Leading the club with vision and passion for community building.
+                  B Pharm, 3rd Year. Leading the club with vision and passion for community building.
                 </p>
               </div>
 
@@ -264,7 +264,7 @@ const About = () => {
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Kumar Kartikey Sahu</h3>
                 <p className="text-purple-600 dark:text-purple-400 font-medium mb-4">Vice President</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  B.Tech, 3rd Year. Coordinating events and fostering member engagement.
+                  BCA, 2nd Year. Coordinating events and fostering member engagement.
                 </p>
               </div>
 
@@ -275,18 +275,18 @@ const About = () => {
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Sachin Kr. Singh</h3>
                 <p className="text-green-600 dark:text-green-400 font-medium mb-4">Secretary</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  B.Tech, 3rd Year. Managing communications and organizational activities.
+                  B. Pharm, 3rd Year. Managing communications and organizational activities.
                 </p>
               </div>
 
-              <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-700">
+              <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-transparent dark:border-slate-700 md:col-start-2">
                 <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
                   <span className="text-2xl font-bold text-white">RP</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">Rudresh Pathak</h3>
                 <p className="text-green-600 dark:text-green-400 font-medium mb-4">Secretary</p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  B.Tech, 3rd Year. Managing communications and organizational activities.
+                  BBA, 2nd Year. Managing communications and organizational activities.
                 </p>
               </div>
             </div>
